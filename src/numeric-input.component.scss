@@ -1,0 +1,15 @@
+
+.numeric-input {
+  position: relative !important;
+
+  input:last-of-type {
+    position: absolute !important;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+/* otherwise its not working with class="form-control" cause MOST browser do not append '!important' if attribute.hide is true !! */
+[hidden] {
+  display: none !important;
+}

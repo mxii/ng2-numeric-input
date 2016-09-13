@@ -1,0 +1,1 @@
+export * from './src/numeric-input.component';

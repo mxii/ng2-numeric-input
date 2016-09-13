@@ -1,0 +1,11 @@
+<div class="numeric-input">
+  <div class="inputs">
+    <input #formattedView type="text" (click)="startEditing()" (focus)="startEditing()" readonly
+      value="{{formattedNumber}}" [style.background-color]="MESSAGE_CHANGE_ME == '' ? '' : 'red'" class="form-control" />
+    <input #numberInput (change)="valueChanged($event.target.value)" type="text" pattern="[ ]*[+-]{0,1}\d*{{decimalCharacter}}{0,1}\d*[ ]*"
+      (blur)="stopEditing()" class="form-control" [hidden]="!editing" />
+  </div>
+  <div class="messages">
+    {{MESSAGE_CHANGE_ME}}
+  </div>
+</div>

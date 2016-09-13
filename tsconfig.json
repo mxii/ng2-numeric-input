@@ -1,0 +1,28 @@
+{
+   "compilerOptions": {
+      "noImplicitAny": true,
+      "module": "commonjs",
+      "target": "ES5",
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "sourceMap": true,
+      "declaration": true,
+      "types": [
+         "hammerjs",
+         "jasmine",
+         "node"
+      ],
+      "lib": [
+         "es2015",
+         "dom"
+      ]
+   },
+   "files": [
+      "ng2-numeric-input.ts",
+      "./src/numeric-input.component.ts",
+      "./src/string.extensions.ts"
+   ],
+   "exclude": [
+      "node_modules"
+   ]
+}
