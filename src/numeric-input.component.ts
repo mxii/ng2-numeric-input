@@ -11,7 +11,7 @@ import './string.extensions';
 <div class="inputs">
    <input #formattedView type="text" (click)="_startEditing()" (focus)="_startEditing()" readonly
       value="{{_formattedNumber}}" [style.background-color]="_errMsg == '' ? '' : 'red'" class="form-control" />
-   <input #numberInput (change)="_valueChanged($event.target.value)" type="text" pattern="[ ]*[+-]{0,1}\d*{{decimalCharacter}}{0,1}\d*[ ]*"
+   <input #numberInput (change)="_valueChanged($event.target.value)" type="text" [pattern]="_pattern"
       (blur)="_stopEditing()" class="form-control" [hidden]="!_editing" />
 </div>
 <div class="messages">
@@ -54,6 +54,7 @@ export class NumericInputComponent implements OnInit, ControlValueAccessor {
    private _formattedNumber: string = '';
    private _errMsg: string;
    private _editing = false;
+   private _pattern = '';
 
    @ViewChild('numberInput') private _numberInputField: ElementRef;
    @Input('value') private _no: number;
@@ -75,6 +76,8 @@ export class NumericInputComponent implements OnInit, ControlValueAccessor {
 
       this._updateNumber();
       this._updateNumericString();
+
+      this._pattern = '[ ]*[+-]{0,1}\d*' + this.decimalCharacter + '{0,1}\d*[ ]*';
    }
 
    private _normalizeNumberToString(val: any, decimalChar: string, thousandChar: string): string {
