@@ -11,4 +11,4 @@ Thumbs.db
 !*.d.ts
 
 # ..
-src/inlined
+# do not ignore it: src/inlined
