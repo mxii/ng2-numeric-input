@@ -5,8 +5,39 @@ import './string.extensions';
 
 @Component({
    selector: 'ng2-numeric-input',
-   templateUrl: 'numeric-input.component.html',
-   styleUrls: ['numeric-input.component.scss'],
+   //templateUrl: 'numeric-input.component.html',
+   template: `
+<div class="numeric-input">
+<div class="inputs">
+   <input #formattedView type="text" (click)="_startEditing()" (focus)="_startEditing()" readonly
+      value="{{_formattedNumber}}" [style.background-color]="_errMsg == '' ? '' : 'red'" class="form-control" />
+   <input #numberInput (change)="_valueChanged($event.target.value)" type="text" pattern="[ ]*[+-]{0,1}\d*{{decimalCharacter}}{0,1}\d*[ ]*"
+      (blur)="_stopEditing()" class="form-control" [hidden]="!_editing" />
+</div>
+<div class="messages">
+   {{_errMsg}}
+</div>
+</div>
+   `,
+   //styleUrls: ['numeric-input.component.scss'],
+   styles: [
+      `
+.numeric-input {
+  position: relative !important;
+}
+
+.numeric-input input:last-of-type {
+   position: absolute !important;
+   left: 0px;
+   top: 0px;
+}
+
+/* otherwise its not working with class="form-control" cause MOST browser do not append '!important' if attribute.hide is true !! */
+[hidden] {
+  display: none !important;
+}
+      `
+   ],
    providers: [
       { /* idk why or what this will do exactly.. but it works! ;) */
          provide: NG_VALUE_ACCESSOR,
