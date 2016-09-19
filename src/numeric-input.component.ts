@@ -77,7 +77,7 @@ export class NumericInputComponent implements OnInit, ControlValueAccessor {
       this._updateNumber();
       this._updateNumericString();
 
-      this._pattern = '[ ]*[+-]{0,1}\d*' + this.decimalCharacter + '{0,1}\d*[ ]*';
+      this._pattern = '[ ]*[+-]{0,1}\\d*' + this.decimalCharacter + '{0,1}\\d*[ ]*';
    }
 
    private _normalizeNumberToString(val: any, decimalChar: string, thousandChar: string): string {
