@@ -132,7 +132,7 @@ export class NumericInputComponent implements OnInit, ControlValueAccessor {
       }
 
       // trim ending zeros
-      while (tmp.length && tmp.indexOf(this.decimalCharacter) && (tmp[tmp.length - 1] === '0' || tmp[tmp.length - 1] === this.decimalCharacter)) {
+      while (tmp.length && tmp.indexOf(this.decimalCharacter) !== -1 && (tmp[tmp.length - 1] === '0' || tmp[tmp.length - 1] === this.decimalCharacter)) {
          tmp = tmp.substr(0, tmp.length - 1);
       }
 
