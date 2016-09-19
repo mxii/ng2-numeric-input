@@ -1,1 +1,1 @@
-export * from './src/numeric-input.component';
+export * from './src/inlined/numeric-input.component';

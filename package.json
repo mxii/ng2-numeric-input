@@ -1,47 +1,49 @@
 {
-   "name": "ng2-numeric-input",
-   "version": "0.0.2",
-   "description": "",
-   "main": "ng2-numeric-input.js",
-   "scripts": {
-      "prepublish": "tsc",
-      "test": "echo \"Error: no test specified\" && exit 1"
-   },
-   "repository": {
-      "type": "git",
-      "url": "git+https://github.com/mxii/ng2-numeric-input.git"
-   },
-   "keywords": [
-      "ng2",
-      "angular2",
-      "input"
-   ],
-   "author": "Sascha 'mxii' E.",
-   "license": "MIT",
-   "bugs": {
-      "url": "https://github.com/mxii/ng2-numeric-input/issues"
-   },
-   "homepage": "https://github.com/mxii/ng2-numeric-input#readme",
-   "devDependencies": {
-      "@angular/common": "2.0.0-rc.5",
-      "@angular/compiler": "2.0.0-rc.5",
-      "@angular/core": "2.0.0-rc.5",
-      "@angular/forms": "0.3.0",
-      "@angular/platform-browser": "2.0.0-rc.5",
-      "@angular/platform-browser-dynamic": "2.0.0-rc.5",
-      "systemjs": "0.19.36",
-      "core-js": "^2.4.0",
-      "reflect-metadata": "^0.1.3",
-      "rxjs": "5.0.0-beta.6",
-      "zone.js": "^0.6.12",
-      "typescript": "2.0.0",
-      "@types/hammerjs": "2.0.32",
-      "@types/jasmine": "2.2.33",
-      "@types/node": "6.0.38"
-   },
-   "typings": [
-      "./ng2-numeric-input.d.ts",
-      "./src/numeric-input.component.d.ts",
-      "./src/string.extensions.d.ts"
-   ]
+  "name": "ng2-numeric-input",
+  "version": "0.0.4",
+  "description": "",
+  "main": "ng2-numeric-input.js",
+  "scripts": {
+    "prepublish": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mxii/ng2-numeric-input.git"
+  },
+  "keywords": [
+    "ng2",
+    "angular2",
+    "input"
+  ],
+  "author": "Sascha 'mxii' E.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mxii/ng2-numeric-input/issues"
+  },
+  "homepage": "https://github.com/mxii/ng2-numeric-input#readme",
+  "devDependencies": {
+    "@angular/common": "2.0.0",
+    "@angular/compiler": "2.0.0",
+    "@angular/core": "2.0.0",
+    "@angular/forms": "2.0.0",
+    "@angular/platform-browser": "2.0.0",
+    "@angular/platform-browser-dynamic": "2.0.0",
+    "@types/hammerjs": "2.0.32",
+    "@types/jasmine": "2.2.33",
+    "@types/node": "6.0.38",
+    "core-js": "^2.4.1",
+    "gulp": "^3.9.1",
+    "gulp-inline-ng2-template": "^3.0.1",
+    "reflect-metadata": "^0.1.3",
+    "rxjs": "5.0.0-beta.12",
+    "systemjs": "0.19.36",
+    "typescript": "2.0.2",
+    "zone.js": "^0.6.23"
+  },
+  "typings": [
+    "./ng2-numeric-input.d.ts",
+    "./src/numeric-input.component.d.ts",
+    "./src/string.extensions.d.ts"
+  ]
 }
